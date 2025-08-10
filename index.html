@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ur">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>VIP Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- canvas اور کچھ transparent HTML controls (mobile friendly) -->
+  <div id="app">
+    <canvas id="game"></canvas>
+
+    <!-- Overlay controls (touch) -->
+    <div id="controls">
+      <button id="btn-left" class="ctl">◀</button>
+      <button id="btn-up" class="ctl">▲</button>
+      <button id="btn-down" class="ctl">▼</button>
+      <button id="btn-right" class="ctl">▶</button>
+      <button id="btn-fire" class="ctl fire">FIRE</button>
+    </div>
+
+    <!-- small info overlay in corner (purely optional, hidden on build if want) -->
+    <div id="info">
+      <div id="score">Score: 0</div>
+      <div id="best">Best: 0</div>
+    </div>
+
+    <!-- simple modal (gameover) drawn as HTML for convenience -->
+    <div id="modal" class="hidden">
+      <div class="card">
+        <h2>Game Over</h2>
+        <p id="modal-score">Score: 0</p>
+        <div class="row">
+          <button id="btn-restart" class="primary">Restart</button>
+          <button id="btn-menu">Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
